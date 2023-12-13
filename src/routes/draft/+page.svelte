@@ -1,10 +1,14 @@
+<svelte:head>
+  <title>とりあえず作成 - チャット返信作成支援ツール</title>
+</svelte:head>
+
 <script>
   let show = false;
   let reply = '';
   function handleClick() {
     show = true;
   }
-  function handleInput() {
+  function handleChange() {
     localStorage.setItem('reply', reply);
   }
 </script>
@@ -24,16 +28,16 @@
       <textarea
         id="reply"
         rows="8"
-        class="w-full px-0 text-sm text-gray-900 bg-white border-1"
+        class="w-full px-0 text-sm rounded-lg text-gray-900 bg-white border-1"
         placeholder="クリックして入力"
-        on:change={handleInput}
+        on:change={handleChange}
         bind:value={reply}
         required
       ></textarea>
     </div>
     <div class="flex items-center justify-end px-3 py-2 border-t">
       <a
-        href="/step2"
+        href="/refine"
         class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
       >
         次へ

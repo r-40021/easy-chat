@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>チャット返信文作成支援ツール</title>
+  <title>チャット返信作成支援ツール</title>
 </svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">
@@ -59,7 +59,7 @@
   </a>
   <a
     type="button"
-    href="/step1"
+    href="/draft"
     class="text-gray-900 text-base font-medium bg-gray-200 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2"
   >
     ない
