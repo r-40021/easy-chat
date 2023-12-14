@@ -23,10 +23,10 @@
 </script>
 
 <svelte:head>
-  <title>完成 - チャット返信作成支援ツール</title>
+  <title>(3/3) 完成 - チャット返信作成支援ツール</title>
 </svelte:head>
 
-<h1 class="text-center font-semibold text-3xl">完成！</h1>
+<h1 class="text-center font-semibold text-3xl">(3/3) 完成！</h1>
 
 <p class="mt-2">完成した返信文をチャットで送ってみましょう！</p>
 

@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>とりあえず作成 - チャット返信作成支援ツール</title>
+  <title>(1/3) とりあえず作成 - チャット返信作成支援ツール</title>
 </svelte:head>
 
 <script>
@@ -14,7 +14,7 @@
 </script>
 
 <h1 class="text-center font-semibold text-3xl">
-  まずは、とりあえず返信文を作ってみてください
+  (1/3) まずは、とりあえず返信文を作ってみてください
 </h1>
 <p class="mt-2">
   ここで入力した返信文をこの後の画面でブラッシュアップしていきます。現段階では言いたいことが伝われば
