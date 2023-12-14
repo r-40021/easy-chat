@@ -7,7 +7,6 @@ export async function POST({ request, cookies }) {
   const url = 'https://jlp.yahooapis.jp/KouseiService/V2/kousei?appid=' + encodeURIComponent(YAHOO_API_KEY);
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'cors',
     body: JSON.stringify({
       "id": "kousei",
       "jsonrpc": "2.0",
