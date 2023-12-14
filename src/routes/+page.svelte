@@ -2,6 +2,18 @@
   <title>チャット返信作成支援ツール</title>
 </svelte:head>
 
+<script>
+  // reset
+  import { count, score, analyzedText, posinegaExecuted, suggestions, checkExecuted, fixedReply } from "./refine/stores";
+  $count = 5;
+  $score = "";
+  $analyzedText = "";
+  $posinegaExecuted = false;
+  $suggestions = [];
+  $checkExecuted = false;
+  $fixedReply = "";
+</script>
+
 <h1 class="text-center font-semibold text-3xl">
   現在の状況について、以下の項目に当てはまるものはありますか？
 </h1>

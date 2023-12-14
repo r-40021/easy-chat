@@ -1,18 +1,8 @@
 <script lang="ts">
   export let reply = "";
+  import { suggestions, fixedReply, checkExecuted } from "./stores";
   import { browser } from "$app/environment";
-  type Suggestion = {
-    length: string;
-    note: string;
-    offset: string;
-    rule: string;
-    suggestion: string;
-    word: string;
-  };
-  let suggestions: Suggestion[] = [];
-  let executed = false;
   let checking = false;
-  let fixedReply = "";
 
   async function check() {
     // 校正実施
@@ -30,14 +20,14 @@
       alert('エラーが発生しました');
     }
     const json = await response.json();
-    suggestions = json.checked.result.suggestions;
-    executed = true;
+    $suggestions = json.checked.result.suggestions;
+    $checkExecuted = true;
     checking = false;
 
     // 訂正後の文を生成
-    fixedReply = reply;
-    for (const suggestion of suggestions) {
-      fixedReply = fixedReply.replaceAll(
+    $fixedReply = reply;
+    for (const suggestion of $suggestions) {
+      $fixedReply = $fixedReply.replaceAll(
         suggestion.word,
         (suggestion.suggestion || suggestion.word)
       );
@@ -45,7 +35,7 @@
   }
 
   function handleClick() {
-    reply = fixedReply;
+    reply = $fixedReply;
     browser && localStorage.setItem("reply", reply);
   }
 </script>
@@ -78,9 +68,9 @@
   {/if}
   校正開始</button
 >
-{#if executed === true && suggestions.length === 0}
+{#if $checkExecuted === true && $suggestions.length === 0}
   <p>訂正箇所はありません。</p>
-{:else if suggestions.length > 0}
+{:else if $suggestions.length > 0}
   <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50">
@@ -90,7 +80,7 @@
         </tr>
       </thead>
       <tbody>
-        {#each suggestions as suggestion}
+        {#each $suggestions as suggestion}
           <tr class="bg-white border-b">
             <th
               scope="row"
@@ -106,7 +96,7 @@
   </div>
 
   <p class="mt-6 text-xl font-semibold">訂正後の返信文</p>
-  <p class="my-2">{fixedReply}</p>
+  <p class="my-2 whitespace-pre-wrap">{$fixedReply}</p>
   <button
     type="button"
     class="px-3 py-2 mb-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"

@@ -1,10 +1,7 @@
 <script lang="ts">
-  export let reply = "";
-  let count = 4;
-  let score = "";
-  let analyzedText = "";
+  import { count, score, analyzedText, posinegaExecuted } from "./stores";
+  export let reply = "";;
   let checking = false;
-  let executed = false;
 
   async function posinega() {
     checking = true;
@@ -21,11 +18,11 @@
       checking = false;
     }
     const json = await response.json();
-    score = formatScore(Number(json.posinega.negaposi));
-    analyzedText = decodeURIComponent(json.posinega.analyzed_text);
-    executed = true;
+    $score = formatScore(Number(json.posinega.negaposi));
+    $analyzedText = decodeURIComponent(json.posinega.analyzed_text);
+    $posinegaExecuted = true;
     checking = false;
-    count--;
+    $count--;
   }
 
   function formatScore(score: number): string {
@@ -66,14 +63,14 @@
 </script>
 
 <p>返信文のポジティブ度を分析します。</p>
-{#if executed === true}
+{#if $posinegaExecuted === true}
   <p class="mt-2">
-    ネガポジ度: <span class="text-2xl font-semibold">{score}</span>
+    ネガポジ度: <span class="text-2xl font-semibold">{$score}</span>
   </p>
-  <p class="mt-2">
-    {analyzedText}
+  <p class="mt-2 whitespace-pre-wrap">
+    {$analyzedText}
   </p>
-  {#if /ネガティブ/.test(score)}
+  {#if /ネガティブ/.test($score)}
     <p class="mt-8 text-xl font-semibold">ポジティブな返信文にするために</p>
     <p>以下の点を心がけてみてください。</p>
     <ul class="space-y-2 list-inside mt-3 list-disc">
@@ -90,12 +87,12 @@
 
 <button
   type="button"
-  class="text-white bg-{count <= 0 ? 'gray-400' : 'blue-700'} hover:bg-{count <=
+  class="text-white bg-{$count <= 0 ? 'gray-400' : 'blue-700'} hover:bg-{$count <=
   0
     ? 'gray-400'
     : 'blue-800'} focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-3 focus:outline-none"
   on:click={posinega}
-  disabled={checking || count <= 0}
+  disabled={checking || $count <= 0}
 >
   {#if checking === true}
     <svg
@@ -118,7 +115,7 @@
   {/if}
   分析開始</button
 >
-<span class="text-gray-500">残り{count}回</span>
+<span class="text-gray-500">残り{$count}回</span>
 <p class="text-sm text-gray-500 mt-3">
   提供: <a
     href="https://metadata.co.jp/apis/negaposi-analyzer/detail.html"
