@@ -39,7 +39,7 @@
     for (const suggestion of suggestions) {
       fixedReply = fixedReply.replaceAll(
         suggestion.word,
-        suggestion.suggestion,
+        (suggestion.suggestion || suggestion.word)
       );
     }
   }
@@ -96,7 +96,7 @@
               scope="row"
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
             >
-              {suggestion.word} → {suggestion.suggestion}
+              {suggestion.word} {suggestion.suggestion && '→' + suggestion.suggestion}
             </th>
             <td class="px-6 py-4">{suggestion.rule}</td>
           </tr>

@@ -2,7 +2,7 @@ import sqlite3 from "sqlite3";
 
 import { json } from '@sveltejs/kit';
 const db = new sqlite3.Database("wnjpn.db");
-console.log(db)
+
 type Sense = {
   synset: string,
   wordid: string,
