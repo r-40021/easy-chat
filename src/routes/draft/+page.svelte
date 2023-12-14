@@ -16,7 +16,7 @@
 <h1 class="text-center font-semibold text-3xl">
   (1/3) まずは、とりあえず返信文を作ってみてください
 </h1>
-<p class="mt-2">
+<p class="mt-2 text-center">
   ここで入力した返信文をこの後の画面でブラッシュアップしていきます。現段階では言いたいことが伝われば
   OK です。
 </p>

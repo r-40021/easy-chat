@@ -24,7 +24,7 @@
 </nav>
 
 <div class="container mx-auto">
-  <div class="flex flex-col justify-center items-center mt-10">
+  <div class="flex flex-col justify-center items-center mt-10 px-2">
     <slot />
   </div>
 </div>

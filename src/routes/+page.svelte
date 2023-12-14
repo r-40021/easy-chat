@@ -61,11 +61,11 @@
     相手の返信が極端に短い
   </li>
 </ul>
-<div class="btns">
+<div class="btns mt-6">
   <a
     type="button"
     href="/end-conversation"
-    class="text-white text-base font-medium bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 mt-6"
+    class="text-white text-base font-medium bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2"
   >
     ある
   </a>

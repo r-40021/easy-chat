@@ -28,7 +28,7 @@
 
 <h1 class="text-center font-semibold text-3xl">(3/3) 完成！</h1>
 
-<p class="mt-2">完成した返信文をチャットで送ってみましょう！</p>
+<p class="mt-2 text-center">完成した返信文をチャットで送ってみましょう！</p>
 
 <div
   class="w-full lg:w-9/12 mt-8 bg-white border border-gray-200 rounded-lg shadow"
@@ -38,7 +38,9 @@
     <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">
       完成した返信文
     </h5>
-    <p class="text-2xl font-semibold text-gray-700 text-center whitespace-pre-wrap">
+    <p
+      class="text-2xl font-semibold text-gray-700 text-center whitespace-pre-wrap break-words"
+    >
       {reply}
     </p>
     <div class="mt-4 flex justify-center">
@@ -63,23 +65,25 @@
           />
         </svg>コピー</button
       >
-      <button
-        type="button"
-        class="inline-flex items-center mx-2 py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
-        on:click={share}
-      >
-        <svg
-          class="w-3.5 h-3.5 me-2"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 18 18"
+      {#if browser && 'share' in navigator}
+        <button
+          type="button"
+          class="inline-flex items-center mx-2 py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
+          on:click={share}
         >
-          <path
-            d="M14.419 10.581a3.564 3.564 0 0 0-2.574 1.1l-4.756-2.49a3.54 3.54 0 0 0 .072-.71 3.55 3.55 0 0 0-.043-.428L11.67 6.1a3.56 3.56 0 1 0-.831-2.265c.006.143.02.286.043.428L6.33 6.218a3.573 3.573 0 1 0-.175 4.743l4.756 2.491a3.58 3.58 0 1 0 3.508-2.871Z"
-          />
-        </svg>共有</button
-      >
+          <svg
+            class="w-3.5 h-3.5 me-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 18 18"
+          >
+            <path
+              d="M14.419 10.581a3.564 3.564 0 0 0-2.574 1.1l-4.756-2.49a3.54 3.54 0 0 0 .072-.71 3.55 3.55 0 0 0-.043-.428L11.67 6.1a3.56 3.56 0 1 0-.831-2.265c.006.143.02.286.043.428L6.33 6.218a3.573 3.573 0 1 0-.175 4.743l4.756 2.491a3.58 3.58 0 1 0 3.508-2.871Z"
+            />
+          </svg>共有</button
+        >
+      {/if}
     </div>
   </div>
 </div>

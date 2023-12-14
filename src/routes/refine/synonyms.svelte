@@ -7,7 +7,7 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} id="synonyms" class="w-screen lg:w-[75vw]">
+<form on:submit|preventDefault={handleSubmit} id="synonyms" class="w-[85vw] lg:w-[75vw]">
   <label
     for="default-search"
     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"

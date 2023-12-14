@@ -20,7 +20,7 @@
 </svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">(2/3) 返信文のブラッシュアップ</h1>
-<p class="mt-2">
+<p class="mt-2 text-center">
   画面下のツールを使用して、前の画面で作成した返信文をブラッシュアップします。
 </p>
 
@@ -67,7 +67,7 @@
 </p>
 <Tabs style="pill">
   <TabItem open title="ネガポジ分析">
-    <div class="w-screen lg:w-[75vw]">
+    <div class="w-[85vw] lg:w-[75vw]">
       <Posinega {reply}/>
     </div>
   </TabItem>
@@ -75,7 +75,7 @@
     <Synonyms />
   </TabItem>
   <TabItem title="文章校正">
-    <div class="w-screen lg:w-[75vw]">
+    <div class="w-[85vw] lg:w-[75vw]">
       <Check bind:reply/>
     </div>
   </TabItem>
