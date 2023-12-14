@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   export let reply = "";
   let count = 4;
   let score = "";
@@ -24,7 +23,6 @@
     const json = await response.json();
     score = formatScore(Number(json.posinega.negaposi));
     analyzedText = decodeURIComponent(json.posinega.analyzed_text);
-    console.log(analyzedText);
     executed = true;
     checking = false;
     count--;
