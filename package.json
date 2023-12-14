@@ -26,7 +26,6 @@
 		"@popperjs/core": "^2.11.8",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",
-		"sqlite3": "^5.1.6",
 		"tailwind-merge": "^2.1.0"
 	}
 }
