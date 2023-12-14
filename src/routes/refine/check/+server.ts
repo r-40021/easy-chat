@@ -15,8 +15,11 @@ export async function POST({ request, cookies }) {
       "params": { "q": reply }
     }),
   });
-  const checked = await response.json();
-  console.log(checked);
+  if (response.ok) {
+    const checked = await response.json();
+    return json({ checked }, { status: 201 });
+  } else {
+    return response;
+  }
 
-  return json({ checked }, { status: 201 });
 }
