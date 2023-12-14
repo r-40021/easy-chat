@@ -1,8 +1,13 @@
-<script>
-  export let reply = '';
+<script lang="ts">
+  let query = "";
+  let textboxValue = ""
+  
+  function handleSubmit() {
+    query = textboxValue;
+  }
 </script>
 
-<form action="/refine/synonyms" method="post" class="w-screen lg:w-[75vw]">
+<form on:submit|preventDefault={handleSubmit} id="synonyms" class="w-screen lg:w-[75vw]">
   <label
     for="default-search"
     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -36,6 +41,7 @@
       placeholder="類義語を検索..."
       required
       autocomplete="off"
+      bind:value={textboxValue}
     />
     <button
       type="submit"
@@ -59,3 +65,15 @@
     >
   </div>
 </form>
+
+{#if query}
+  <iframe
+    src="https://related-keywords.com/result/synonym?q={encodeURIComponent(
+      query,
+    )}"
+    class="w-full h-[600px]"
+    sandbox="allow-scripts allow-same-origin"
+    title="類義語検索結果"
+    frameborder="0"
+  ></iframe>
+{/if}

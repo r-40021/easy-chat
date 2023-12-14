@@ -48,7 +48,7 @@
     </div>
   </TabItem>
   <TabItem title="類義語検索">
-    <Synonyms {reply} />
+    <Synonyms />
   </TabItem>
   <TabItem title="文章校正">
     <div class="w-screen lg:w-[75vw]">

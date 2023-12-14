@@ -7,10 +7,6 @@
   let checking = false;
   let executed = false;
 
-  onMount(() => {
-    posinega();
-  });
-
   async function posinega() {
     checking = true;
     const data = { reply: reply };
@@ -28,6 +24,7 @@
     const json = await response.json();
     score = formatScore(Number(json.posinega.negaposi));
     analyzedText = decodeURIComponent(json.posinega.analyzed_text);
+    console.log(analyzedText);
     executed = true;
     checking = false;
     count--;
@@ -121,7 +118,7 @@
       />
     </svg>
   {/if}
-  再分析</button
+  分析開始</button
 >
 <span class="text-gray-500">残り{count}回</span>
 <p class="text-sm text-gray-500 mt-3">
