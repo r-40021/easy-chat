@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION } from "$env/static/private";
 import AWS from "aws-sdk";
+var global = globalThis;
 
 const client = new AWS.Comprehend({
   region: AWS_REGION,
