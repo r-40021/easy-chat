@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  import { browser } from "$app/environment";
   // reset
   import { count, scores, sentiment, posinegaExecuted, suggestions, checkExecuted, fixedReply } from "./refine/stores";
   $count = 10;
@@ -12,6 +13,7 @@
   $suggestions = [];
   $checkExecuted = false;
   $fixedReply = "";
+  browser && localStorage.removeItem("reply");
 </script>
 
 <h1 class="text-center font-semibold text-3xl">
