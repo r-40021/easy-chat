@@ -64,6 +64,7 @@
 </script>
 
 <p>返信文のポジティブ度を分析します。</p>
+<p class="mt-2">「この返信が相手を傷つけないか？」の目安になります。</p>
 {#if $posinegaExecuted === true}
   <p class="mt-2 mb-4">
     判定結果: <span class="text-3xl font-bold"

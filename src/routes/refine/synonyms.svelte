@@ -7,6 +7,8 @@
   }
 </script>
 
+<p>似た意味の表現を検索できます。表現を和らげたい時などに便利です。</p>
+<p class="mt-2 mb-4 text-sm">※<a href="https://rakkoid.com/register?service_name=rakko-keyword&isNotLogging=true" class="font-medium text-blue-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">ラッコキーワードに会員登録</a>すると検索できる回数が増えます。</p>
 <form on:submit|preventDefault={handleSubmit} id="synonyms" class="w-[85vw] lg:w-[75vw]">
   <label
     for="default-search"
@@ -77,3 +79,12 @@
     frameborder="0"
   ></iframe>
 {/if}
+
+<p class="text-sm text-gray-500 mt-3">
+  使用サービス: <a
+    href="https://related-keywords.com/synonym"
+    class="font-medium text-blue-600 underline hover:no-underline"
+    target="_blank"
+    rel="noopener noreferrer">ラッコキーワード</a
+  >
+</p>
