@@ -16,8 +16,9 @@
       body: JSON.stringify(data),
     });
     if (!response.ok) {
+      alert(`エラーが発生しました[${response.status}: ${response.statusText}]`);
       checking = false;
-      alert('エラーが発生しました');
+      return;
     }
     const json = await response.json();
     $suggestions = json.checked.result.suggestions;
@@ -106,10 +107,10 @@
 {/if}
 
 <p class="text-sm text-gray-500 mt-3">
-  提供: <a
+  使用サービス: <a
     href="https://developer.yahoo.co.jp/webapi/jlp/kousei/v2/kousei.html"
     class="font-medium text-blue-600 underline hover:no-underline"
     target="_blank"
-    rel="noopener noreferrer">Yahoo! Japan</a
+    rel="noopener noreferrer">Yahoo! JAPAN Web API - 校正支援 (V2)</a
   >
 </p>

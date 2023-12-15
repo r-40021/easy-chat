@@ -1,9 +1,13 @@
 import { writable } from 'svelte/store';
 
 // posinega
-export const count = writable(5);
-export const score = writable("");
-export const analyzedText = writable("");
+type Scores = {
+  sentiment: string,
+  score: number
+};
+export const count = writable(10);
+export const scores = writable<Scores>({sentiment: "", score: 0});
+export const sentiment = writable("");
 export const posinegaExecuted = writable(false);
 
 // check

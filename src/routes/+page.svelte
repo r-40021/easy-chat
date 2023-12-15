@@ -4,10 +4,10 @@
 
 <script>
   // reset
-  import { count, score, analyzedText, posinegaExecuted, suggestions, checkExecuted, fixedReply } from "./refine/stores";
-  $count = 5;
-  $score = "";
-  $analyzedText = "";
+  import { count, scores, sentiment, posinegaExecuted, suggestions, checkExecuted, fixedReply } from "./refine/stores";
+  $count = 10;
+  $scores = {sentiment: "", score: 0};
+  $sentiment = "";
   $posinegaExecuted = false;
   $suggestions = [];
   $checkExecuted = false;

@@ -1,9 +1,14 @@
 <script lang="ts">
-  import { count, score, analyzedText, posinegaExecuted } from "./stores";
-  export let reply = "";;
+  import { count, scores, sentiment, posinegaExecuted } from "./stores";
+  export let reply = "";
   let checking = false;
 
+  // ネガポジ判定
   async function posinega() {
+    if (!reply || reply.length === 0) {
+      alert("返信文を1文字以上入力してください。");
+      return;
+    }
     checking = true;
     const data = { reply: reply };
     const response = await fetch("/refine/posinega", {
@@ -14,49 +19,45 @@
       body: JSON.stringify(data),
     });
     if (!response.ok) {
-      alert("エラーが発生しました");
+      if (!reply || reply.length === 0) {
+        alert("返信文を1文字以上入力してください。");
+      } else {
+        alert(
+          `エラーが発生しました[${response.status}: ${response.statusText}]`,
+        );
+      }
       checking = false;
+      return;
     }
     const json = await response.json();
-    $score = formatScore(Number(json.posinega.negaposi));
-    $analyzedText = decodeURIComponent(json.posinega.analyzed_text);
+    $sentiment = json.response.Sentiment; // 判定結果
+    $scores = json.response.SentimentScore; // 感情ごとのスコア
     $posinegaExecuted = true;
     checking = false;
     $count--;
   }
 
-  function formatScore(score: number): string {
-    switch (score) {
-      case -3:
-        return "とてもネガティブ";
-        break;
-
-      case -2:
+  // 英語の感情名を日本語にする
+  function formatSentiment(sentiment: string): string {
+    switch (sentiment.toLowerCase()) {
+      case "negative":
         return "ネガティブ";
         break;
 
-      case -1:
-        return "少しネガティブ";
+      case "neutral":
+        return "中立";
         break;
 
-      case 0:
-        return "普通";
-        break;
-
-      case 1:
-        return "少しポジティブ";
-        break;
-
-      case 2:
+      case "positive":
         return "ポジティブ";
         break;
 
-      case 3:
-        return "とてもポジティブ";
+      case "mixed":
+        return "混在";
         break;
 
       default:
-        return "データなし";
+        return "不明な感情";
         break;
     }
   }
@@ -64,15 +65,18 @@
 
 <p>返信文のポジティブ度を分析します。</p>
 {#if $posinegaExecuted === true}
-  <p class="mt-2">
-    ネガポジ度: <span class="text-2xl font-semibold">{$score}</span>
+  <p class="mt-2 mb-4">
+    判定結果: <span class="text-3xl font-bold"
+      >{formatSentiment($sentiment)}</span
+    >
   </p>
-  <p class="mt-2 whitespace-pre-wrap">
-    {$analyzedText}
-  </p>
-  {#if /ネガティブ/.test($score)}
+  {#each Object.entries($scores) as [eachSentiment, score]}
+    <p class="mt-2">
+      {formatSentiment(eachSentiment)}度: <span class="font-semibold">{score && typeof score === "number" && Math.round(score * 1000) / 1000}</span>
+    </p>
+  {/each}
+  {#if $sentiment === "NEGATIVE"}
     <p class="mt-8 text-xl font-semibold">ポジティブな返信文にするために</p>
-    <p>以下の点を心がけてみてください。</p>
     <ul class="space-y-2 list-inside mt-3 list-disc">
       <li>「うれしい」、「楽しい」などプラスの形容詞を入れる</li>
       <li>提案を断る場合は代替案を入れる</li>
@@ -82,13 +86,17 @@
         具体的な情報を増やして相手が返信しやすくすると、なおよくなります。
       </li>
     </ul>
+    <p class="font-semibold mt-2">
+      提案を断る内容の場合は "ポジティブ" の判定を出すのが難しいため、ポジティブ度0.07以上が目安となります。
+    </p>
   {/if}
 {/if}
 
 <button
   type="button"
-  class="text-white bg-{$count <= 0 ? 'gray-400' : 'blue-700'} hover:bg-{$count <=
-  0
+  class="text-white bg-{$count <= 0
+    ? 'gray-400'
+    : 'blue-700'} hover:bg-{$count <= 0
     ? 'gray-400'
     : 'blue-800'} focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-3 focus:outline-none"
   on:click={posinega}
@@ -117,15 +125,10 @@
 >
 <span class="text-gray-500">残り{$count}回</span>
 <p class="text-sm text-gray-500 mt-3">
-  提供: <a
-    href="https://metadata.co.jp/apis/negaposi-analyzer/detail.html"
+  使用サービス: <a
+    href="https://aws.amazon.com/jp/comprehend/"
     class="font-medium text-blue-600 underline hover:no-underline"
     target="_blank"
-    rel="noopener noreferrer">メタデータ株式会社</a
+    rel="noopener noreferrer">Amazon Comprehend</a
   >
-</p>
-
-<p class="text-sm text-gray-500 mt-2">
-  ※API
-  の仕様上、入力された返信文は暗号化されずに送信されるため、返信文に機密情報は含めないようにしてください。
 </p>
