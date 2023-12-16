@@ -74,7 +74,7 @@
       query,
     )}"
     class="w-full h-[600px]"
-    sandbox="allow-scripts allow-same-origin"
+    sandbox="allow-scripts allow-same-origin allow-forms"
     title="類義語検索結果"
     frameborder="0"
   ></iframe>
