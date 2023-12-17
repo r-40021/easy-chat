@@ -21,6 +21,10 @@
   let checking = false;
 
   async function fwoh() {
+    if (!reply || reply.length === 0) {
+      alert("返信文を1文字以上入力してください。");
+      return;
+    }
     checking = true;
     const data = { reply: reply };
     const response = await fetch("/refine/5w1h", {
@@ -31,7 +35,13 @@
       body: JSON.stringify(data),
     });
     if (!response.ok) {
-      alert(`エラーが発生しました[${response.status}: ${response.statusText}]`);
+      if (!reply || reply.length === 0) {
+        alert("返信文を1文字以上入力してください。");
+      } else {
+        alert(
+          `エラーが発生しました[${response.status}: ${response.statusText}]`,
+        );
+      }
       checking = false;
       return;
     }

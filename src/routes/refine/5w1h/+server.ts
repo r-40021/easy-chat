@@ -5,6 +5,11 @@ import xml2js from "xml2js";
 export async function POST({ request, cookies }) {
   const { reply } = await request.json();
 
+  // 返信文がない場合はエラーを返す
+  if (!reply || reply.length === 0) {
+    return json({ status: 400 });
+  }
+
   const url = 'http://ap.mextractr.net/ma9/mext5w1h?apikey=' + encodeURIComponent(METADATA_API_KEY) + '&text=' + encodeURIComponent(reply);
   const response = await fetch(url);
   if (response.ok) {
