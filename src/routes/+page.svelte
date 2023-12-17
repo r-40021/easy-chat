@@ -1,27 +1,44 @@
-<svelte:head>
-  <title>チャット返信作成支援ツール</title>
-</svelte:head>
-
 <script>
   import { browser } from "$app/environment";
   // reset
-  import { count, scores, sentiment, posinegaExecuted, suggestions, checkExecuted, fixedReply } from "./refine/stores";
-  $count = 10;
-  $scores = {sentiment: "", score: 0};
+  import {
+    posinegaCount,
+    scores,
+    sentiment,
+    posinegaExecuted,
+    suggestions,
+    checkExecuted,
+    fixedReply,
+    fwohCount,
+    fwohData,
+    fwohExecuted,
+  } from "./refine/stores";
+  $posinegaCount = 10;
+  $scores = { sentiment: "", score: 0 };
   $sentiment = "";
   $posinegaExecuted = false;
   $suggestions = [];
   $checkExecuted = false;
   $fixedReply = "";
+  $fwohCount = 5;
+  $fwohData = {
+    what: [],
+    when: [],
+    who: [],
+    where: [],
+  };
+  $fwohExecuted = false;
   browser && localStorage.removeItem("reply");
 </script>
+
+<svelte:head>
+  <title>チャット返信作成支援ツール</title>
+</svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">
   現在の状況について、以下の項目に当てはまるものはありますか？
 </h1>
-<p class="mt-2">
-  そもそも、しっかりとした返信が必要かどうかを判定します。
-</p>
+<p class="mt-2">そもそも、しっかりとした返信が必要かどうかを判定します。</p>
 <ul class="max-w-md space-y-1 text-gray-700 text-xl list-inside mt-6">
   <li class="flex items-center">
     <svg

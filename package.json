@@ -25,10 +25,12 @@
 		"@aws-sdk/client-bedrock-runtime": "^3.474.0",
 		"@popperjs/core": "^2.11.8",
 		"@sveltejs/adapter-vercel": "^4.0.1",
+		"@types/xml2js": "^0.4.14",
 		"aws-sdk": "^2.1519.0",
 		"buffer": "^6.0.3",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",
-		"tailwind-merge": "^2.1.0"
+		"tailwind-merge": "^2.1.0",
+		"xml2js": "^0.6.2"
 	}
 }

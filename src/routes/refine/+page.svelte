@@ -2,6 +2,7 @@
   import { browser } from "$app/environment";
   import { Tabs, TabItem } from "flowbite-svelte";
   import Posinega from "./posinega.svelte";
+  import Fwoh from "./5w1h.svelte";
   import Synonyms from "./synonyms.svelte";
   import Check from "./check.svelte";
 
@@ -12,19 +13,23 @@
 
   function handleChange() {
     browser && localStorage.setItem("reply", reply);
-  }  
+  }
 </script>
 
 <svelte:head>
   <title>(2/3) ブラッシュアップ - チャット返信作成支援ツール</title>
 </svelte:head>
 
-<h1 class="text-center font-semibold text-3xl">(2/3) 返信文のブラッシュアップ</h1>
+<h1 class="text-center font-semibold text-3xl">
+  (2/3) 返信文のブラッシュアップ
+</h1>
 <p class="mt-2 text-center">
   画面下のツールを使用して、前の画面で作成した返信文をブラッシュアップします。
 </p>
 
-<div class="w-full lg:w-9/12 mt-8 mb-4 mt-8 border border-gray-200 rounded-lg bg-gray-50">
+<div
+  class="w-full lg:w-9/12 mt-8 mb-4 mt-8 border border-gray-200 rounded-lg bg-gray-50"
+>
   <div class="px-4 py-2 bg-white rounded-t-lg">
     <label for="reply" class="sr-only">返信文</label>
     <textarea
@@ -68,7 +73,12 @@
 <Tabs style="pill">
   <TabItem open title="ネガポジ分析">
     <div class="w-[85vw] lg:w-[75vw]">
-      <Posinega {reply}/>
+      <Posinega {reply} />
+    </div>
+  </TabItem>
+  <TabItem title="5W1H">
+    <div class="w-[85vw] lg:w-[75vw]">
+      <Fwoh {reply}/>
     </div>
   </TabItem>
   <TabItem title="類義語検索">
@@ -76,7 +86,7 @@
   </TabItem>
   <TabItem title="文章校正">
     <div class="w-[85vw] lg:w-[75vw]">
-      <Check bind:reply/>
+      <Check bind:reply />
     </div>
   </TabItem>
 </Tabs>

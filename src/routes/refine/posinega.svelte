@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { count, scores, sentiment, posinegaExecuted } from "./stores";
+  import { posinegaCount, scores, sentiment, posinegaExecuted } from "./stores";
   export let reply = "";
   let checking = false;
 
@@ -34,7 +34,7 @@
     $scores = json.response.SentimentScore; // 感情ごとのスコア
     $posinegaExecuted = true;
     checking = false;
-    $count--;
+    $posinegaCount--;
   }
 
   // 英語の感情名を日本語にする
@@ -95,13 +95,13 @@
 
 <button
   type="button"
-  class="text-white bg-{$count <= 0
+  class="text-white bg-{$posinegaCount <= 0
     ? 'gray-400'
-    : 'blue-700'} hover:bg-{$count <= 0
+    : 'blue-700'} hover:bg-{$posinegaCount <= 0
     ? 'gray-400'
     : 'blue-800'} focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-3 focus:outline-none"
   on:click={posinega}
-  disabled={checking || $count <= 0}
+  disabled={checking || $posinegaCount <= 0}
 >
   {#if checking === true}
     <svg
@@ -124,7 +124,7 @@
   {/if}
   分析開始</button
 >
-<span class="text-gray-500">残り{$count}回</span>
+<span class="text-gray-500">残り{$posinegaCount}回</span>
 <p class="text-sm text-gray-500 mt-3">
   使用サービス: <a
     href="https://aws.amazon.com/jp/comprehend/"
