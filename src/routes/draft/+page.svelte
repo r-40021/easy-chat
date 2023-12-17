@@ -1,5 +1,4 @@
 <script>
-  import SvelteMarkdown from "svelte-markdown";
   let show = false;
   let reply = "";
   function handleClick() {
@@ -32,7 +31,7 @@
     }
     const json = await response.json();
     checking = false;
-    responseText = json.text;
+    responseText = json.text.trim();
   }
 </script>
 
@@ -164,7 +163,7 @@
     >
   </form>
   <p class="whitespace-pre-wrap break-words my-4">
-    <SvelteMarkdown source={responseText} />
+    {responseText}
   </p>
   <p class="text-sm text-gray-500 mb-8 mt-2">
     使用サービス: <a

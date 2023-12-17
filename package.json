@@ -29,7 +29,6 @@
 		"buffer": "^6.0.3",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",
-		"svelte-markdown": "^0.4.0",
 		"tailwind-merge": "^2.1.0"
 	}
 }
