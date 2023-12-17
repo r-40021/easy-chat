@@ -2,7 +2,7 @@
   import { browser } from "$app/environment";
   let reply = "";
   if (browser) {
-    reply = localStorage.getItem("reply") || "";
+    reply = sessionStorage.getItem("reply") || "";
   }
 
   function copy() {

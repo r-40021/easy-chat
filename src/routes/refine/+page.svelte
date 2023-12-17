@@ -8,11 +8,11 @@
 
   let reply = "";
   if (browser) {
-    reply = localStorage.getItem("reply") || "";
+    reply = sessionStorage.getItem("reply") || "";
   }
 
   function handleChange() {
-    browser && localStorage.setItem("reply", reply);
+    browser && sessionStorage.setItem("reply", reply);
   }
 </script>
 

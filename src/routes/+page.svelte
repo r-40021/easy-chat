@@ -28,7 +28,7 @@
     where: [],
   };
   $fwohExecuted = false;
-  browser && localStorage.removeItem("reply");
+  browser && sessionStorage.removeItem("reply");
 </script>
 
 <svelte:head>

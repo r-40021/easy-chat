@@ -37,7 +37,7 @@
 
   function handleClick() {
     reply = $fixedReply;
-    browser && localStorage.setItem("reply", reply);
+    browser && sessionStorage.setItem("reply", reply);
   }
 </script>
 

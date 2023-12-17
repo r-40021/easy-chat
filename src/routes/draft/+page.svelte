@@ -5,7 +5,7 @@
     show = true;
   }
   function handleChange() {
-    localStorage.setItem("reply", reply);
+    sessionStorage.setItem("reply", reply);
   }
 
   let person = "";
