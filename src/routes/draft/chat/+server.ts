@@ -9,11 +9,9 @@ export async function POST({ request, cookies }) {
     cookie: BING_COOKIE
   })
 
-  console.log('creating...');
   const res = await api.sendMessage(`${person}とチャットをしています。\n現在以下のような状況です。適切なチャットの返信を考えてください。\n\n${situation}`, {
     variant: 'Creative'
   });
-  console.log('response', res.text);
 
   return json({ res }, { status: 200 });
 }
