@@ -101,7 +101,7 @@
   class="mt-8 w-full lg:w-9/12"
   on:submit|preventDefault={handleSubmit}
 >
-  <p class="text-2xl font-semibold">AI に助けを求める</p>
+  <p class="text-2xl font-semibold">AI に助けを求める (最終手段)</p>
   <form class="w-full">
     <div class="w-full">
       <label
