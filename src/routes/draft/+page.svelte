@@ -16,7 +16,7 @@
   async function handleSubmit() {
     checking = true;
     const data = { person: person, situation: situation };
-    responseText = "AI が頑張って考えています…(数分かかる場合もあるので気長に待ってください。)";
+    responseText = "AI が頑張って考えています…(それなりに時間がかかるので気長に待ってください。)";
     const response = await fetch("/draft/chat", {
       method: "POST",
       headers: {
@@ -32,7 +32,7 @@
     }
     const json = await response.json();
     checking = false;
-    responseText = json.res.text;
+    responseText = json.text;
   }
 </script>
 
@@ -168,10 +168,10 @@
   </p>
   <p class="text-sm text-gray-500 mb-8 mt-2">
     使用サービス: <a
-      href="https://www.bing.com/search?q=Bing+AI&showconv=1"
+      href="https://aws.amazon.com/jp/bedrock/claude/"
       class="font-medium text-blue-600 underline hover:no-underline"
       target="_blank"
-      rel="noopener noreferrer">Bing AI</a
+      rel="noopener noreferrer">Anthropic Claude 1.3 (Amazon Bedrock 上)</a
     >
   </p>
 </div>
