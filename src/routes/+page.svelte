@@ -19,6 +19,9 @@
 <h1 class="text-center font-semibold text-3xl">
   現在の状況について、以下の項目に当てはまるものはありますか？
 </h1>
+<p class="mt-2">
+  そもそも、しっかりとした返信が必要かどうかを判定します。
+</p>
 <ul class="max-w-md space-y-1 text-gray-700 text-xl list-inside mt-6">
   <li class="flex items-center">
     <svg
