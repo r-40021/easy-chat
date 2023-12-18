@@ -17,7 +17,6 @@ export async function POST({ request, cookies }) {
     const rawJson = await xml2js.parseStringPromise(fwoh);
     console.dir(rawJson.feed.entry);
     const parsedJson = JSON.parse(JSON.stringify(rawJson.feed.entry));
-    console.log(rawJson);
     return json({ fwoh: parsedJson[0] }, { status: 200 });
   } else {
     return response;

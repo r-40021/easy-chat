@@ -52,7 +52,6 @@
       who: convertToArray(json.fwoh["gd:who"]),
       what: convertExtendedPropertyToArray(json.fwoh["gd:extendedProperty"]),
     };
-    console.log($fwohData);
 
     $fwohExecuted = true;
     checking = false;
