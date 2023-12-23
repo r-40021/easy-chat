@@ -1706,10 +1706,10 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flowbite-svelte@^0.44.20:
-  version "0.44.20"
-  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.44.20.tgz#e2e39e18a28172d96dfeec107ee7e98f4957321f"
-  integrity sha512-juvzolgEvGEga8PIe+vpzGf9/xfpvd4p9ZgtSPpWQLZB8iyY/ebbKb5HNu60uqoehdokFuy/0htBBLNmP2yd/g==
+flowbite-svelte@^0.44.21:
+  version "0.44.21"
+  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.44.21.tgz#e26ce50574f224d9f70acef9462d8bd338b1a468"
+  integrity sha512-M3xmu/HUgGHMR+iJNzxd9J3j8o1SzsrbvWlOKQOdIhcsRVNioqfcNvvjKgSciMf8p/GcUQq6AS5UyfIpqo5aGw==
   dependencies:
     "@floating-ui/dom" "^1.5.3"
     apexcharts "^3.44.0"
