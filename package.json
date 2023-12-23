@@ -31,7 +31,7 @@
 		"buffer": "^6.0.3",
 		"flowbite": "^2.2.1",
 		"flowbite-svelte": "^0.44.20",
-		"tailwind-merge": "^2.1.0",
+		"tailwind-merge": "^2.2.0",
 		"xml2js": "^0.6.2"
 	}
 }
