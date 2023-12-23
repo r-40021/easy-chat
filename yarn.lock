@@ -1151,10 +1151,10 @@
     "@smithy/util-buffer-from" "^2.0.0"
     tslib "^2.5.0"
 
-"@sveltejs/adapter-vercel@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-4.0.2.tgz#2f7ba22c92ed1d77910ad06a38a24e21a4840925"
-  integrity sha512-DrNXWIRz5f6I4TZPLfSb7q5vDJRf7sKUxPbe10X4pOHdCBTFbb2JDi2UTnV3ULP5YSqFvIsSIPdnuMoSFsn2mQ==
+"@sveltejs/adapter-vercel@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-4.0.3.tgz#a8288fffd440e2cda05d7ec12b4fbb00ab6bb2b5"
+  integrity sha512-pd2XVsDcjQ6XdHJVLeyYK9Mh2k5ChrlXEPAy7pGMbbgRkkWHnzIF5kZJqpsMH7jIFS2nxXBkUEwTpvSexKZzeQ==
   dependencies:
     "@vercel/nft" "^0.26.0"
     esbuild "^0.19.9"
