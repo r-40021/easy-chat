@@ -81,7 +81,7 @@ git clone https://github.com/r-40021/easy-chat.git
 > AWS の料金については以下のページをご覧ください。  
 > (どちらも東京リージョンを使用しています。)
 > 
-> - [ポジネガ分析 (Amazon Comprehend 感情分析)](https://aws.amazon.com/jp/comprehend/pricing/)
+> - [ネガポジ分析 (Amazon Comprehend 感情分析)](https://aws.amazon.com/jp/comprehend/pricing/)
 > - [AI 機能 (Amazon Bedrock - Claude Instant)](https://aws.amazon.com/jp/bedrock/pricing/)
 > 
 > なお、5W1H API については1日100回まで、文章校正 API については1リクエストあたり4KB、1分あたり300回の制限があります。  
