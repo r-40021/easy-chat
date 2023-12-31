@@ -1,5 +1,6 @@
 <script lang="ts">
   import { browser } from "$app/environment";
+  import { goto } from "$app/navigation";
   import { Tabs, TabItem } from "flowbite-svelte";
   import Posinega from "./posinega.svelte";
   import Fwoh from "./5w1h.svelte";
@@ -9,6 +10,9 @@
   let reply = "";
   if (browser) {
     reply = sessionStorage.getItem("reply") || "";
+    if (!reply) {
+      goto('/');
+    }
   }
 
   function handleChange() {

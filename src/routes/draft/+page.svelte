@@ -1,8 +1,8 @@
-<script>
-  let show = false;
+<script lang="ts">
+  let showAIPanel = false;
   let reply = "";
   function handleClick() {
-    show = true;
+    showAIPanel = true;
   }
   function handleChange() {
     sessionStorage.setItem("reply", reply);
@@ -39,6 +39,13 @@
     count--;
     responseText = json.text.trim();
   }
+
+  function beforeRefine(e:Event) {
+    if (!reply) {
+      e.preventDefault();
+      alert("返信文を入力してください");
+    }
+  }
 </script>
 
 <svelte:head>
@@ -71,6 +78,7 @@
       <a
         href="/refine"
         class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
+        on:click={beforeRefine}
       >
         次へ
         <svg
@@ -96,14 +104,14 @@
 <button
   type="submit"
   on:click={handleClick}
-  class:hidden={show === true}
+  class:hidden={showAIPanel === true}
   class="inline-flex items-center py-2.5 px-4 mt-8 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
 >
   AI に助けを求める (最終手段)
 </button>
 
 <div
-  class:hidden={show === false}
+  class:hidden={showAIPanel === false}
   class="mt-8 w-full lg:w-9/12"
   on:submit|preventDefault={handleSubmit}
 >
