@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@aws-sdk/client-bedrock-runtime": "^3.484.0",
 		"@popperjs/core": "^2.11.8",
-		"@sveltejs/adapter-vercel": "^4.0.3",
+		"@sveltejs/adapter-vercel": "^4.0.4",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@types/xml2js": "^0.4.14",
 		"@vercel/analytics": "^1.1.1",

@@ -1156,12 +1156,12 @@
     "@smithy/util-buffer-from" "^2.0.0"
     tslib "^2.5.0"
 
-"@sveltejs/adapter-vercel@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-4.0.3.tgz#a8288fffd440e2cda05d7ec12b4fbb00ab6bb2b5"
-  integrity sha512-pd2XVsDcjQ6XdHJVLeyYK9Mh2k5ChrlXEPAy7pGMbbgRkkWHnzIF5kZJqpsMH7jIFS2nxXBkUEwTpvSexKZzeQ==
+"@sveltejs/adapter-vercel@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-4.0.4.tgz#a80f1010a6712d3ee43b27227518f433f40b7161"
+  integrity sha512-2MMThT6eROTqAGmx81Xv+tafhpetQfRUDIsboFiGgkFoaxcmoTzW4t9GyXZdMY8xl1YOdvAnZXcCgacYzmVWVw==
   dependencies:
-    "@vercel/nft" "^0.26.0"
+    "@vercel/nft" "^0.26.1"
     esbuild "^0.19.9"
 
 "@sveltejs/kit@^2.0.7":
@@ -1237,10 +1237,10 @@
   dependencies:
     server-only "^0.0.1"
 
-"@vercel/nft@^0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.26.0.tgz#ae5c905529c83ab561e0308f202d68ef2e110407"
-  integrity sha512-4JoDL1jMPoPb9PpilQx7IQwxDUYCSwnonN8GrR6bP2BVJR390toF/tJe20tcI+wDWPkJKJqNloipfaeQfTeU2w==
+"@vercel/nft@^0.26.1":
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.26.2.tgz#c5018201dbb324d7fac455be6cee03d34ebd9ce8"
+  integrity sha512-bxe2iShmKZi7476xYamyKvhhKwQ6JPEtQ2FSq1AjMUH2buMd8LQMkdoHinTqZYc+1sMTh3G0ARdjzNvV1FEisA==
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.5"
     "@rollup/pluginutils" "^4.0.0"
