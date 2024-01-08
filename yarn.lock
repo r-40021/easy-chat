@@ -1164,10 +1164,10 @@
     "@vercel/nft" "^0.26.0"
     esbuild "^0.19.9"
 
-"@sveltejs/kit@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.0.6.tgz#59e5a57fb4df3aa6f681fbf44f986542a923377e"
-  integrity sha512-dnHtyjBLGXx+hrZQ9GuqLlSfTBixewJaByUVWai7LmB4dgV3FwkK155OltEgONDQW6KW64hLNS/uojdx3uC2/g==
+"@sveltejs/kit@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.0.7.tgz#b46a8eccfae45de9d2008c75894495bcdfc7ac9f"
+  integrity sha512-qLoPLqdyMKASxAMFuMrv86l81YKhdioXLsa87+QFv2Rmh0GroFXfSIJMpxI4bHfVt8oXRa71G0/lXhJ/2wTPxQ==
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^0.6.0"
