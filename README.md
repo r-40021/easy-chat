@@ -4,18 +4,17 @@
 
 # 必要な環境
 
-プログラムを動作させるためには以下の環境が必要です。
+プログラムを動作させるためには、以下のソフトウェアがインストールされた **Windows, Mac または Linux の PC** が必要です。
 
-- Windows, Mac または Linux の PC
-- [Visual Studio Code](https://code.visualstudio.com/) がインストールされていること
-- [Node.js](https://nodejs.org/) がインストールされており、かつ npm が使用できる状態であること
-(Node.js v20 (LTS バージョン) で動作を確認しています。)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/) (npm も使用できる状態にしてください。)  
+※Node.js v20 (LTS バージョン) で動作を確認しています。
 
 各ソフトウェアのインストール方法については以下の記事を参照してください。
 
 Visual Studio Code…[【VSCode】インストール／日本語化／基本的な使い方 (senseshare.jp)](https://blog.senseshare.jp/vscode.html)
 
-Node.js…[Windows、macOS、LinuxにNode.jsとnpmをインストールする方法 (kinsta.com)](https://kinsta.com/jp/blog/how-to-install-node-js/) 
+Node.js…[Windows、macOS、LinuxにNode.jsとnpmをインストールする方法 (kinsta.com)](https://kinsta.com/jp/blog/how-to-install-node-js/#nodejsnpm) 
 
 # プログラムのダウンロード
 
@@ -79,7 +78,7 @@ git clone https://github.com/r-40021/easy-chat.git
 > (使いすぎにより多額の料金が発生し支払いが困難になったとしても、開発者は責任を負いかねます。)**
 > 
 > AWS の料金については以下のページをご覧ください。  
-> (どちらも東京リージョンを使用しています。)
+> (どちらの機能も東京リージョンを使用しています。)
 > 
 > - [ネガポジ分析 (Amazon Comprehend 感情分析)](https://aws.amazon.com/jp/comprehend/pricing/)
 > - [AI 機能 (Amazon Bedrock - Claude Instant)](https://aws.amazon.com/jp/bedrock/pricing/)
@@ -90,7 +89,7 @@ git clone https://github.com/r-40021/easy-chat.git
 ## AI 機能、ネガポジ分析を使用するための準備 (最大の山場)
 
 1. [AWS (Amazon Web Services) コンソール](https://console.aws.amazon.com/) にログインします。  
-(アカウントを持っていない場合は、上のリンクからアカウントを作成します。(クレジットカード・電話番号が必要です))
+(アカウントを持っていない場合は、上のリンクからアカウントを作成します。クレジットカード (プリペイドカードも可)・電話番号が必要です)
 2. 画面上の検索ボックスに「IAM」と入力し、表示された検索結果の中から [IAM] をクリックします。
     
 ![AWS コンソールで IAM と検索](https://github.com/r-40021/easy-chat/assets/75155258/4c86f312-df9d-42af-9b6e-0f13dc954fb7)
@@ -265,6 +264,10 @@ YAHOO_API_KEY=(Yahoo! Japan Web API の Client ID)
     
 5. サーバーを終了させたい場合は、ターミナル上で Ctrl + C を押してください。  
 「パッチ ジョブを終了しますか」と聞かれた場合は「y」と入力して Enter キーを押すとサーバーが終了します。
+
+> [!WARNING]
+> サーバーは必要なときにのみ起動してください。  
+> サーバー用途に設計されていない PC でサーバーを24時間稼働させることは火災などのリスクを伴います。
 
 # お問い合わせ先
 
