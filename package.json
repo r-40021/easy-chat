@@ -22,7 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@aws-sdk/client-bedrock-runtime": "^3.490.0",
+		"@aws-sdk/client-bedrock-runtime": "^3.496.0",
 		"@popperjs/core": "^2.11.8",
 		"@sveltejs/adapter-vercel": "^4.0.5",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
