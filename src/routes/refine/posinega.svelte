@@ -76,7 +76,7 @@
       {formatSentiment(eachSentiment)}度: <span class="font-semibold">{score && typeof score === "number" && Math.round(score * 1000) / 1000}</span>
     </p>
   {/each}
-  {#if $sentiment === "NEGATIVE"}
+  {#if $sentiment !== "POSITIVE"}
     <p class="mt-8 text-xl font-semibold">ポジティブな返信文にするために</p>
     <ul class="space-y-2 list-inside mt-3 list-disc">
       <li>提案を断る場合は代替案を入れる</li>
@@ -88,7 +88,7 @@
       <li>ネガティブな内容の後に「説」を加えるとネガティブ度が下がる説も提唱されています。</li>
     </ul>
     <p class="font-semibold mt-2">
-      提案を断る内容の場合は "ポジティブ" の判定を出すのが難しいため、ポジティブ度0.07以上が目安となります。
+      提案を断るときには、ネガポジ分析にこだわるよりも約束を改める提案をするほうが有効です。
     </p>
   {/if}
 {/if}
