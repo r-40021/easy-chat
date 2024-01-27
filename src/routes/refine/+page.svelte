@@ -51,7 +51,7 @@
       href="/finish"
       class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
     >
-      完了
+      完成
       <svg
         class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
         aria-hidden="true"
