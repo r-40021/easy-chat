@@ -49,11 +49,11 @@
 </script>
 
 <svelte:head>
-  <title>(1/3) とりあえず作成 - チャット返信作成支援ツール</title>
+  <title>(1/2) とりあえず作成 - チャット返信作成支援ツール</title>
 </svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">
-  (1/3) まずは、とりあえず返信文を作ってみてください
+  (1/2) まずは、とりあえず返信文を作ってみてください
 </h1>
 <p class="mt-2 text-center">
   ここで入力した返信文をこの後の画面でブラッシュアップしていきます。現段階では言いたいことが伝われば

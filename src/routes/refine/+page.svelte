@@ -21,11 +21,11 @@
 </script>
 
 <svelte:head>
-  <title>(2/3) ブラッシュアップ - チャット返信作成支援ツール</title>
+  <title>(2/2) ブラッシュアップ - チャット返信作成支援ツール</title>
 </svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">
-  (2/3) 返信文のブラッシュアップ
+  (2/2) 返信文のブラッシュアップ
 </h1>
 <p class="mt-2 text-center">
   画面下のツールを使用して、前の画面で作成した返信文をブラッシュアップします。
