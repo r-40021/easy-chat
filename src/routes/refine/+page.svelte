@@ -78,7 +78,7 @@
       <Posinega {reply} />
     </div>
   </TabItem>
-  <TabItem title="類義語検索">
+  <TabItem title="類義表現検索">
     <Synonyms />
   </TabItem>
   <TabItem title="5W1H">

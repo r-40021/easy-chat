@@ -189,7 +189,7 @@
       href="https://aws.amazon.com/jp/bedrock/claude/"
       class="font-medium text-blue-600 underline hover:no-underline"
       target="_blank"
-      rel="noopener noreferrer">Anthropic Claude 1.3 (Amazon Bedrock 上)</a
+      rel="noopener noreferrer">Anthropic Claude Instant (Amazon Bedrock 上)</a
     >
   </p>
 </div>

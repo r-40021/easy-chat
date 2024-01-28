@@ -69,7 +69,7 @@
       id="default-search"
       name="word"
       class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="類義語を検索..."
+      placeholder="類義表現を検索..."
       required
       autocomplete="off"
       bind:value={word}
@@ -136,6 +136,6 @@
     href="https://aws.amazon.com/jp/bedrock/claude/"
     class="font-medium text-blue-600 underline hover:no-underline"
     target="_blank"
-    rel="noopener noreferrer">Anthropic Claude 1.3 (Amazon Bedrock 上)</a
+    rel="noopener noreferrer">Anthropic Claude Instant (Amazon Bedrock 上)</a
   >
 </p>
