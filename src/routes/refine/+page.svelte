@@ -3,15 +3,15 @@
   import { goto } from "$app/navigation";
   import { Tabs, TabItem } from "flowbite-svelte";
   import Posinega from "./posinega.svelte";
-  import Fwoh from "./5w1h.svelte";
   import Synonyms from "./synonyms.svelte";
+  import Fwoh from "./5w1h.svelte";
   import Check from "./check.svelte";
 
   let reply = "";
   if (browser) {
     reply = sessionStorage.getItem("reply") || "";
     if (!reply) {
-      goto('/');
+      goto("/");
     }
   }
 
@@ -24,9 +24,7 @@
   <title>(2/2) 推敲 - チャット返信作成支援ツール</title>
 </svelte:head>
 
-<h1 class="text-center font-semibold text-3xl">
-  (2/2) 返信文の推敲
-</h1>
+<h1 class="text-center font-semibold text-3xl">(2/2) 返信文の推敲</h1>
 <p class="mt-2 text-center">
   画面下のツールを使用して、前の画面で作成した返信文を推敲します。
 </p>
@@ -80,13 +78,13 @@
       <Posinega {reply} />
     </div>
   </TabItem>
-  <TabItem title="5W1H">
-    <div class="w-[85vw] lg:w-[75vw]">
-      <Fwoh {reply}/>
-    </div>
-  </TabItem>
   <TabItem title="類義語検索">
     <Synonyms />
+  </TabItem>
+  <TabItem title="5W1H">
+    <div class="w-[85vw] lg:w-[75vw]">
+      <Fwoh {reply} />
+    </div>
   </TabItem>
   <TabItem title="文章校正">
     <div class="w-[85vw] lg:w-[75vw]">
