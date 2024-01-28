@@ -38,3 +38,7 @@ export const fwohData = writable<FwohData>({
   who: [],
   where: [],
 });
+
+// 類義語
+export const synonymCount = writable(15);
+export const synonymResponse = writable("");

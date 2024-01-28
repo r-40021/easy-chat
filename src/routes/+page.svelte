@@ -12,6 +12,8 @@
     fwohCount,
     fwohData,
     fwohExecuted,
+    synonymCount,
+    synonymResponse
   } from "./refine/stores";
   $posinegaCount = 10;
   $scores = { sentiment: "", score: 0 };
@@ -28,6 +30,8 @@
     where: [],
   };
   $fwohExecuted = false;
+  $synonymCount = 15;
+  $synonymResponse = "";
   browser && sessionStorage.removeItem("reply");
 </script>
 
