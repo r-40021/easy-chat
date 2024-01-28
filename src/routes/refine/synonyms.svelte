@@ -131,7 +131,7 @@
   <SvelteMarkdown source={$synonymResponse} />
 </div>
 
-<p class="text-sm text-gray-500 mb-8 mt-2">
+<p class="text-sm text-gray-500 mt-3">
   使用サービス: <a
     href="https://aws.amazon.com/jp/bedrock/claude/"
     class="font-medium text-blue-600 underline hover:no-underline"
