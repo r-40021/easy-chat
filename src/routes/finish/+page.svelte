@@ -1,12 +1,15 @@
 <script>
   import { browser } from "$app/environment";
   let reply = "";
+  let copied = false;
+
   if (browser) {
     reply = sessionStorage.getItem("reply") || "";
   }
 
   function copy() {
     browser && navigator.clipboard.writeText(reply);
+    copied = true;
   }
 
   async function share() {
@@ -49,23 +52,38 @@
         class="inline-flex items-center mx-2 py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
         on:click={copy}
       >
-        <svg
-          class="w-3.5 h-3.5 me-2"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 20"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"
-          />
-        </svg>コピー</button
+        {#if copied === true}
+          <svg
+            class="w-3.5 h-3.5 me-2"
+            aria-hidden="true"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+              d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+            /></svg
+          >
+          コピーしました
+        {:else}
+          <svg
+            class="w-3.5 h-3.5 me-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"
+            />
+          </svg>
+          コピー
+        {/if}</button
       >
-      {#if browser && 'share' in navigator}
+      {#if browser && "share" in navigator}
         <button
           type="button"
           class="inline-flex items-center mx-2 py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"

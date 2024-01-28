@@ -143,9 +143,11 @@
         fill="currentColor"
       />
     </svg>
+    抽出中...
+  {:else}
+    抽出開始
   {/if}
-  抽出開始</button
->
+</button>
 <span class="text-gray-500">残り{$fwohCount}回</span>
 <p class="text-sm text-gray-500 mt-3">
   提供: <a

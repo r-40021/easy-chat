@@ -73,7 +73,12 @@
   </p>
   {#each Object.entries($scores) as [eachSentiment, score]}
     <p class="mt-2">
-      {formatSentiment(eachSentiment)}度: <span class="font-semibold">{score && typeof score === "number" && Math.round(score * 1000) / 1000}</span>
+      {formatSentiment(eachSentiment)}度:
+      <span class="font-semibold"
+        >{score &&
+          typeof score === "number" &&
+          Math.round(score * 1000) / 1000}</span
+      >
     </p>
   {/each}
   {#if $sentiment !== "POSITIVE"}
@@ -82,10 +87,10 @@
       <li>提案を断る場合は代替案を入れる</li>
       <li>絵文字を効果的に使う</li>
       <li>表現を間接的なものに変える (「類義語検索」を使うと便利です。)</li>
+      <li>具体的な情報を増やして相手が返信しやすくする</li>
       <li>
-        具体的な情報を増やして相手が返信しやすくする
+        ネガティブな内容の後に「説」を加えるとネガティブ度が下がる説も提唱されています。
       </li>
-      <li>ネガティブな内容の後に「説」を加えるとネガティブ度が下がる説も提唱されています。</li>
     </ul>
     <p class="font-semibold mt-2">
       提案を断るときには、ネガポジ分析にこだわるよりも約束を改める提案をするほうが有効です。
@@ -121,8 +126,11 @@
         fill="currentColor"
       />
     </svg>
+    分析中...
+  {:else}
+    分析開始
   {/if}
-  分析開始</button
+  </button
 >
 <span class="text-gray-500">残り{$posinegaCount}回</span>
 <p class="text-sm text-gray-500 mt-3">

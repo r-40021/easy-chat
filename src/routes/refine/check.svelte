@@ -30,7 +30,7 @@
     for (const suggestion of $suggestions) {
       $fixedReply = $fixedReply.replaceAll(
         suggestion.word,
-        (suggestion.suggestion || suggestion.word)
+        suggestion.suggestion || suggestion.word,
       );
     }
   }
@@ -42,7 +42,9 @@
 </script>
 
 <p>誤った日本語を修正します。</p>
-<p class="mt-2">目上の人に返信する際に使用すれば、誠実な印象を与えられるかもしれません。</p>
+<p class="mt-2">
+  目上の人に返信する際に使用すれば、誠実な印象を与えられるかもしれません。
+</p>
 <button
   type="button"
   class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2 focus:outline-none"
@@ -67,9 +69,11 @@
         fill="currentColor"
       />
     </svg>
+    校正中...
+  {:else}
+    校正開始
   {/if}
-  校正開始</button
->
+</button>
 {#if $checkExecuted === true && $suggestions.length === 0}
   <p>訂正箇所はありません。</p>
 {:else if $suggestions.length > 0}
@@ -88,7 +92,8 @@
               scope="row"
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
             >
-              {suggestion.word} {suggestion.suggestion && '→ ' + suggestion.suggestion}
+              {suggestion.word}
+              {suggestion.suggestion && "→ " + suggestion.suggestion}
             </th>
             <td class="px-6 py-4">{suggestion.rule}</td>
           </tr>
@@ -102,8 +107,7 @@
   <button
     type="button"
     class="px-3 py-2 mb-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-    on:click={handleClick}
-    >返信文に適用</button
+    on:click={handleClick}>返信文に適用</button
   >
 {/if}
 
