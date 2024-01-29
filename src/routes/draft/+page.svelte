@@ -53,7 +53,7 @@
 </svelte:head>
 
 <h1 class="text-center font-semibold text-3xl">
-  (1/2) まずは、とりあえず返信文を作ってみてください
+  (1/2) とりあえず返信文を作ってみてください
 </h1>
 <p class="mt-2 text-center">
   ここで入力した返信文をこの後の画面で推敲していきます。現段階では言いたいことが伝われば
