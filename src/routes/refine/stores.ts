@@ -31,7 +31,7 @@ type FwohData = {
   where: string[];
 }
 export const fwohExecuted = writable(false);
-export const fwohCount = writable(5);
+export const fwohCount = writable(3);
 export const fwohData = writable<FwohData>({
   what: [],
   when: [],
@@ -40,5 +40,5 @@ export const fwohData = writable<FwohData>({
 });
 
 // 類義語
-export const synonymCount = writable(15);
+export const synonymCount = writable(7);
 export const synonymResponse = writable("");

@@ -22,7 +22,7 @@
   $suggestions = [];
   $checkExecuted = false;
   $fixedReply = "";
-  $fwohCount = 5;
+  $fwohCount = 3;
   $fwohData = {
     what: [],
     when: [],
@@ -30,7 +30,7 @@
     where: [],
   };
   $fwohExecuted = false;
-  $synonymCount = 15;
+  $synonymCount = 7;
   $synonymResponse = "";
   browser && sessionStorage.removeItem("reply");
 </script>
