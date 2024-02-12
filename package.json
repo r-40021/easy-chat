@@ -31,7 +31,7 @@
 		"aws-sdk": "^2.1551.0",
 		"buffer": "^6.0.3",
 		"flowbite": "^2.2.1",
-		"flowbite-svelte": "^0.44.22",
+		"flowbite-svelte": "^0.44.23",
 		"svelte-markdown": "^0.4.1",
 		"tailwind-merge": "^2.2.1",
 		"xml2js": "^0.6.2"
