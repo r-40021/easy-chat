@@ -33,7 +33,7 @@
 		"flowbite": "^2.3.0",
 		"flowbite-svelte": "^0.44.24",
 		"svelte-markdown": "^0.4.1",
-		"tailwind-merge": "^2.2.1",
+		"tailwind-merge": "^2.2.2",
 		"xml2js": "^0.6.2"
 	}
 }
