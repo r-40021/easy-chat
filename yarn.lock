@@ -1188,12 +1188,12 @@
     "@smithy/util-buffer-from" "^3.0.0"
     tslib "^2.6.2"
 
-"@sveltejs/adapter-vercel@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-5.3.0.tgz#42c246c3f1c1a7a57f0cb13fe6ab0411c3829672"
-  integrity sha512-JzTJVmAWmbyNe3pQU2l0M1ggt4FjIVnKHEQOrqW4XVxYtNGdq3znuMqFSdzsR+5LaIEFqZaLIpm82XZsZroBoQ==
+"@sveltejs/adapter-vercel@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-5.3.1.tgz#03b5345229c014224115947881dc92a7a11971cb"
+  integrity sha512-0iz+Y2ZWM1royXNkNS4TGNYFsMazRckYN+GrJsRq1utzss1Xfoax7C5eafzrsQLPitoLeXBgE31K5abrJ7UgxA==
   dependencies:
-    "@vercel/nft" "^0.26.1"
+    "@vercel/nft" "^0.27.1"
     esbuild "^0.20.2"
 
 "@sveltejs/kit@^2.5.10":
@@ -1275,15 +1275,15 @@
   dependencies:
     server-only "^0.0.1"
 
-"@vercel/nft@^0.26.1":
-  version "0.26.2"
-  resolved "https://registry.npmjs.org/@vercel/nft/-/nft-0.26.2.tgz"
-  integrity sha512-bxe2iShmKZi7476xYamyKvhhKwQ6JPEtQ2FSq1AjMUH2buMd8LQMkdoHinTqZYc+1sMTh3G0ARdjzNvV1FEisA==
+"@vercel/nft@^0.27.1":
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.27.1.tgz#79415f8f65b362dca2f89f44dd58281917cc13bd"
+  integrity sha512-K6upzYHCV1cq2gP83r1o8uNV1vwvAlozvMqp7CEjYWxo0CMI8/4jKcDkVjlypVhrfZ54SXwh9QbH0ZIk/vQCsw==
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.5"
     "@rollup/pluginutils" "^4.0.0"
     acorn "^8.6.0"
-    acorn-import-attributes "^1.9.2"
+    acorn-import-attributes "^1.9.5"
     async-sema "^3.1.1"
     bindings "^1.4.0"
     estree-walker "2.0.2"
@@ -1303,10 +1303,10 @@ abbrev@1:
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-acorn-import-attributes@^1.9.2:
-  version "1.9.2"
-  resolved "https://registry.npmjs.org/acorn-import-attributes/-/acorn-import-attributes-1.9.2.tgz"
-  integrity sha512-O+nfJwNolEA771IYJaiLWK1UAwjNsQmZbTRqqwBYxCgVQTmpFEMvBw6LOIQV0Me339L5UMVYFyRohGnGlQDdIQ==
+acorn-import-attributes@^1.9.5:
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/acorn-import-attributes/-/acorn-import-attributes-1.9.5.tgz#7eb1557b1ba05ef18b5ed0ec67591bfab04688ef"
+  integrity sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==
 
 acorn@^8.10.0, acorn@^8.6.0, acorn@^8.9.0:
   version "8.11.2"
