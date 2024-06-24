@@ -1897,10 +1897,10 @@ fill-range@^7.1.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flowbite-svelte@^0.46.2:
-  version "0.46.2"
-  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.46.2.tgz#1a3af9aed8544651bf63d03055e1631077fbe29b"
-  integrity sha512-nOPJ4xBq3T/s3yiow+YyabupWiPqj1TQ7Fv12gLYTHFsjwBOcelWPEFbe1G/yO8a6gm243QE9KG9m+ag/N7KyA==
+flowbite-svelte@^0.46.5:
+  version "0.46.5"
+  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.46.5.tgz#5f4e611b9bc3ee9baa649fb967339d1b6c3c1f84"
+  integrity sha512-YSykTuR4AtD9RpACnrg9fac/fDtK+VB3oNggsM2MOmO9d2qr+bYyb7xdoLeSHepcVI330rEusEBZzTvUnwHfEQ==
   dependencies:
     "@floating-ui/dom" "^1.6.5"
     apexcharts "^3.49.1"
