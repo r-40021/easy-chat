@@ -1931,10 +1931,10 @@ flowbite-datepicker@^1.3.0:
     "@rollup/plugin-node-resolve" "^15.2.3"
     flowbite "^2.0.0"
 
-flowbite-svelte@^0.46.13:
-  version "0.46.13"
-  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.46.13.tgz#aed8ce0c8e13374d014da9a06f85321abb0898a1"
-  integrity sha512-j2hDyjEj3vlTrfLtYZbuVEBdkcRifrggryUFxEp1s8eJiv2PlRd4J1YW0UtUEBBe7kvF4ryUUPTna8JKcNiLgQ==
+flowbite-svelte@^0.46.14:
+  version "0.46.14"
+  resolved "https://registry.yarnpkg.com/flowbite-svelte/-/flowbite-svelte-0.46.14.tgz#ee9d1b9c6f63597ae3d78ff4406e9ac345d3dd5b"
+  integrity sha512-eIoQ7WQfyhHkCwmg2T9V46U27J+zpISmYcwPtPn689bNV9q8TB1e6Nvn1ElhjEjcIKZsHQBQWzJ6qk/8mkvxgg==
   dependencies:
     "@floating-ui/dom" "^1.6.7"
     apexcharts "^3.49.2"
